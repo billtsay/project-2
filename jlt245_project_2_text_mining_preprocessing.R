@@ -1,6 +1,10 @@
 install.packages(c("tm", "NLP"))
 
+# This script will run three times with NAME = "election", "hillary" and "trump", and generates TDM files for each.
 NAME = "election"
+# NAME = "hillary"
+# NAME = "trump"
+
 # data cleaning and preprocessing.
 # read data from csv file.
 
@@ -10,12 +14,19 @@ library(stringr)
 # dataFrame = read.csv(csv)
 
 filenames <- c(
-  str_c("jlt245_project_2_text_mining_dataset_", NAME, "_2016-10-27.csv"), 
-  str_c("jlt245_project_2_text_mining_dataset_", NAME, "_2016-10-28.csv")
+  str_c("jlt245_project_2_text_mining_dataset_", NAME, "_2016-10-28.csv"),
+  str_c("jlt245_project_2_text_mining_dataset_", NAME, "_2016-10-29.csv"),
+  str_c("jlt245_project_2_text_mining_dataset_", NAME, "_2016-10-30.csv"),
+  str_c("jlt245_project_2_text_mining_dataset_", NAME, "_2016-10-31.csv"),
+  str_c("jlt245_project_2_text_mining_dataset_", NAME, "_2016-11-01.csv"),
+  str_c("jlt245_project_2_text_mining_dataset_", NAME, "_2016-11-02.csv"),
+  str_c("jlt245_project_2_text_mining_dataset_", NAME, "_2016-11-03.csv"),
+  str_c("jlt245_project_2_text_mining_dataset_", NAME, "_2016-11-04.csv")
 )
 
 dataFrame <- do.call(rbind,lapply(filenames,read.csv))
 
+save(dataFrame, file=str_c("jlt245_project_2_text_mining_dataframe", NAME, ".Rda"))
   
 names(dataFrame)
 dim(dataFrame)
