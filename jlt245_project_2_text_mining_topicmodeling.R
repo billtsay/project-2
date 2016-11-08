@@ -1,4 +1,17 @@
-NAME = "election"
+#!/usr/bin/env Rscript
+args = commandArgs(trailingOnly=TRUE)
+if (length(args)==0) {
+  stop("One argument must be supplied (input file).n", call.=FALSE)
+}
+
+setwd("~/project-2")
+
+# This script will run three times with NAME = "election", "hillary" and "trump", and generates TDM files for each.
+NAME = args[1]    
+
+# NAME = "election"
+# NAME = "hillary"
+# NAME = "trump"
 
 library(stringr)
 library(tm)
@@ -9,7 +22,6 @@ load(file = str_c("jlt245_project_2_text_mining_tdm_", NAME, ".RData"))
 
 # Topic Modeling
 dtm <- as.DocumentTermMatrix(tdm)
-install.packages("topicmodels")
 library(topicmodels)
 
 lda <- LDA(dtm, k = 10)

@@ -2,7 +2,7 @@
 # I have created an account in at twitter.com with the credentitals as below.
 # The maximum amount of tweets I can download at a time is about 6k - 7k.
 # We can download a few times at different time for a bigger dataset if needed.
-install.packages(c("devtools"))
+install.packages(c("devtools", "stringr"))
 library(devtools)
 install_github("twitteR", username="geoffjentry")
 
@@ -55,4 +55,5 @@ write.csv(dataFrame, file = fn)
 
 # verify the length of the tweets.
 #(nTweets <- length(tweets))
+
 

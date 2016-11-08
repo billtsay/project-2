@@ -1,4 +1,18 @@
-NAME = "hillary"
+#!/usr/bin/env Rscript
+args = commandArgs(trailingOnly=TRUE)
+if (length(args)==0) {
+  stop("One argument must be supplied (input file).n", call.=FALSE)
+}
+
+# This script will run three times with NAME = "election", "hillary" and "trump", and generates TDM files for each.
+NAME = args[1]    
+
+# NAME = "election"
+# NAME = "hillary"
+# NAME = "trump"
+
+setwd("~/project-2")
+
 k = 6 # cluster number
 
 # drawing Cluster Dengrogram by using hierachy cluster.

@@ -1,4 +1,18 @@
-NAME = "hillary"  # three cases "election", "hillary" and "trump"
+#!/usr/bin/env Rscript
+args = commandArgs(trailingOnly=TRUE)
+if (length(args)==0) {
+  stop("One argument must be supplied (input file).n", call.=FALSE)
+}
+
+# This script will run three times with NAME = "election", "hillary" and "trump", and generates TDM files for each.
+NAME = args[1]    
+
+# NAME = "election"
+# NAME = "hillary"
+# NAME = "trump"
+
+setwd("~/project-2")
+
 library(stringr)
 
 fn = str_c("jlt245_project_2_text_mining_tdm_", NAME, ".RData") 
@@ -17,7 +31,6 @@ set.seed(1234)
 library("clue")
 library("grid")
 
-install.packages("seriation")
 library("seriation")
 
 # This chart may take an hour to display.
