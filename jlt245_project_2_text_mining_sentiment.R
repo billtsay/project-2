@@ -1,4 +1,3 @@
-install.packages(c("tidyr", "purrr", "lubridate", "knitr", "tidytext"))
 
 library(stringr)
 library(tm)
@@ -35,8 +34,6 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, cache = TRU
                       dev = "svg")
 theme_set(theme_bw())
 
-
-
 library(lubridate)
 library(scales)
 library(tidytext)
@@ -61,7 +58,6 @@ tweet_words %>%
   coord_flip()
 
 ggsave(str_c("jlt245_project_2_text_mining_sentiment_tweet_words.pdf"))
-
 
 nrc <- sentiments %>%
   filter(lexicon == "nrc") %>%
@@ -147,3 +143,4 @@ trump_hillary_ratios %>%
                     values = c("red", "lightblue"))
 
 ggsave(str_c("jlt245_project_2_text_mining_sentiment_scale_log_ratio.pdf"))
+

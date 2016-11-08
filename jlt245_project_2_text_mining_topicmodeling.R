@@ -34,4 +34,6 @@ topics <- topics(lda)
 topics <- data.frame(date=as.Date(dataFrame$created), topic=topics)
 ggplot(topics, aes(date, fill=term[topic])) + geom_density(position = "stack")
 
+ggsave(str_c("jlt245_project_2_text_mining_topics_", NAME, ".pdf"))
+
 

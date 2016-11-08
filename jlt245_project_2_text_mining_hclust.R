@@ -28,7 +28,9 @@ rm <- as.matrix(rTdm)
   
 distMatrix <- dist(scale(rm))
 fit <-hclust(distMatrix, method = "ward")
-  
+
+pdf(str_c("jlt245_project_2_text_mining_hclust_", NAME, ".pdf"))
 plot(fit)
-  
 rect.hclust(fit, k = k)
+dev.off() 
+
