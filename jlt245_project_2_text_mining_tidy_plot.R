@@ -39,5 +39,6 @@ ap_sentiments %>%
   theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
   ylab("Contribution to sentiment")
 
+ggsave(file = str_c("jlt245_project_2_text_mining_tidy_plot.pdf"))
 
 

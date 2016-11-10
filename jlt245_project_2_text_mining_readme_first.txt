@@ -26,6 +26,9 @@ The downloaded source packages are in
   jlt245_project_2_text_mining_topicmodeling.R
   jlt245_project_2_text_mining_skmeans.R
   jlt245_project_2_text_mining_sentiment.R
+  jlt245_project_2_text_mining_tidy.R
+  jlt245_project_2_text_mining_tidy_plot.R
+
 
 * jlt245_project_2_text_mining_install_packages.R
 
@@ -105,6 +108,36 @@ jlt245_project_2_text_mining_sentiment_differences.pdf
 jlt245_project_2_text_mining_sentiment_log_ratio.pdf
 jlt245_project_2_text_mining_sentiment_scale_log_ratio.pdf
 jlt245_project_2_text_mining_sentiment_tweet_words.pdf
+
+How to Run
+
+  Rscript jlt245_project_2_text_mining_sentiment.R
+
+
+* jlt245_project_2_text_mining_tidy.R
+
+To convert dataset of 10 thousand records into dtm (Document Term Matrix). This step will take half of a day, so I save the outcome into:
+
+  jlt245_project_2_text_mining_tidydtm.RData
+
+for the next step to analyze the dtm and plot the charts.
+
+How to Run
+
+  Rscript jlt245_project_2_text_mining_tidy.R
+
+
+* jlt245_project_2_text_mining_tidy_plot.R
+
+Read the tidy's dtm RData and analyze them. The outcome is the chart:
+
+  jlt245_project_2_text_mining_tidy_plot.pdf
+
+How to Run
+
+  Rscript jlt245_project_2_text_mining_tidy_plot.R
+
+
 
 * jlt245_project_2_text_mining_skmeans.R
 
