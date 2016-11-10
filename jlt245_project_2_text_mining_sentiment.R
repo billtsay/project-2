@@ -7,6 +7,9 @@ library(purrr)
 library(twitteR)
 library(tidyr)
 
+setwd("~/project-2")
+
+
 # load Hillary and Trump's dataframe and merge them into one dataframe
 # we will analyze the relative sentiment between these two candidates.
 NAME = "hillary"
